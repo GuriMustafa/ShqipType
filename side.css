@@ -1,0 +1,184 @@
+body {
+  font-family: "Roboto Mono", monospace;
+  background-color: #1a1a1a;
+  color: #e5e5e5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.div1 {
+  width: 100%;
+  height: 100px;
+  background-color: rgb(56, 56, 193);
+  position: absolute;
+  top: 0;
+  text-align: left;
+}
+.div1 h1 {
+  color: white;
+  font-size: 2rem;
+  font-weight: bolder;
+  margin-left: 50px;
+}
+.div1 p {
+  margin-top: -15px;
+  margin-left: 50px;
+}
+.div1 button,
+a {
+  position: absolute;
+  right: 4.6%;
+  top: 60%;
+  background-color: rgb(67, 67, 219);
+  color: rgb(255, 255, 255);
+  font-weight: bolder;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  text-decoration: none;
+}
+.heart {
+  width: 60px;
+  height: 60px;
+  background-color: rgb(67, 67, 219);
+  position: absolute;
+  top: 2%;
+  right: 5%;
+  transform: rotate(-45deg);
+  margin: 50px auto;
+}
+
+.heart::before,
+.heart::after {
+  content: "";
+  width: 60px;
+  height: 60px;
+  background-color: rgb(67, 67, 219);
+  border-radius: 50%;
+  position: absolute;
+}
+
+.heart::before {
+  top: -30px;
+  left: 0;
+}
+
+.heart::after {
+  left: 30px;
+  top: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 800px;
+}
+.logo {
+  width: 300px;
+  height: auto;
+  margin-bottom: -180px;
+  margin-left: -30px;
+}
+#wordContainer {
+  font-size: 1.8rem;
+  line-height: 2.5rem;
+  width: 120%;
+  margin-right: 40px;
+  margin-bottom: 2rem;
+  text-align: left;
+  user-select: none;
+  color: #ffffff;
+}
+
+.word {
+  margin-right: 0.5rem;
+  display: inline-block;
+}
+
+.letter {
+  position: relative;
+}
+
+.letter.correct {
+  color: #25ad39;
+}
+
+.letter.wrong {
+  color: #ff5c5c;
+  background-color: rgba(255, 92, 92, 0.2);
+  border-radius: 2px;
+}
+
+.letter.extra {
+  color: #ff5c5c;
+  opacity: 0.6;
+}
+
+.word.current {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+}
+
+.letter.current {
+  position: relative;
+}
+
+.letter.current::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background-color: #e5e5e5;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.stats {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 2rem;
+  font-size: 1.2rem;
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat-value {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: rgb(56, 56, 193);
+}
+
+.restart-btn {
+  margin-top: 2rem;
+  padding: 10px 20px;
+  background-color: rgb(56, 56, 193);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.restart-btn:hover {
+  background-color: rgb(56, 56, 193);
+}
